@@ -1,6 +1,6 @@
 # 🏎️ Formula 1 Budget Limitation Analysis
 
-## Overview
+## Motivation
 For my DSA210 project, I want to compare data before and after the F1 2021 Budget Cap and its effects on personal performance, salaries, and winners.  
 Before 2021, high-spending teams such as Mercedes and Ferrari consistently dominated; the new cost-cap rules aim to level the field.
 
