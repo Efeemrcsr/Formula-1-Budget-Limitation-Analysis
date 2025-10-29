@@ -1,8 +1,8 @@
 # 🏎️ Formula 1 Budget Limitation Analysis
 
 ## Overview
-For my DSA210 project, I wanted to compare data before and after F1 2021 Budget Cap and it's effects on personal performance, salaries and winners.
-Before 2021, high-spending teams such as Mercedes and Ferrari consistently dominated, the new cost-cap rules aims to level the field.  
+For my DSA210 project, I want to compare data before and after the F1 2021 Budget Cap and its effects on personal performance, salaries, and winners.  
+Before 2021, high-spending teams such as Mercedes and Ferrari consistently dominated; the new cost-cap rules aim to level the field.
 
 The project tests whether **team success is now less dependent on total spending** and **more related to driver skill and salaries**.
 
@@ -11,17 +11,17 @@ The project tests whether **team success is now less dependent on total spending
 ## Objectives
 - Analyze how **team budgets** correlate with **constructor rankings** before and after 2021.  
 - Examine whether **driver salaries** have become equal after the budget cap.  
-- Test if **driver performance (skill/value)** became a decider on team's success.  
+- Test if **driver performance (skill/value)** became a decider of a team’s success.  
 - Compare findings through visualizations and statistical analysis.
 
 ---
 
 ## Data Sources
-### Performance & Results  
+### Performance & Results
 - [Kaggle: *Formula 1 World Championship (1950–2020)*](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020)  
   Contains constructors, drivers, races, points, standings, and results.
 
-### Driver Salaries (2012 – 2025)
+### Driver Salaries (2012–2025)
 Data compiled from publicly available articles:
 - Crash.net salary reports (2012–2015)  
 - GrandPrix247 (2016–2017)  
@@ -40,8 +40,8 @@ Data compiled from publicly available articles:
 ### Data Collection & Cleaning
 - Merge Kaggle race results (team-year performance) with salary estimates.  
 - Standardize team names and convert currencies to USD (2021 base year).  
-- Label each observation as **pre-cap (≤ 2020)** or **post-cap (≥ 2021)**.
-- Combine salaries with teams spendings. 
+- Label each observation as **pre-cap (≤ 2020)** or **post-cap (≥ 2021)**.  
+- Combine salaries with team spending.
 
 ### Exploratory Data Analysis
 - Visualize team budgets, total points, and salary distributions.  
@@ -65,9 +65,9 @@ Data compiled from publicly available articles:
 
 | # | Hypothesis | Null Hypothesis (H₀) | Alternative (H₁) |
 |:-:|-------------|----------------------|------------------|
-| 1 | **Budget–Performance Correlation** | Team budget and points correlation did **not change** after 2021 | Correlation **changed** after budget cap|
+| 1 | **Budget–Performance Correlation** | Team budget and points correlation did **not change** after 2021 | Correlation **changed** after budget cap |
 | 2 | **Salary Effect on Performance** | Driver salary is not significantly related to team success | Driver salary is **positively related** to team success after the cap |
-| 3 | **Salary Distribution** | Driver salaries show no difference in variance pre/post bugdet cap | Salary variance **decreased** after budget cap |
+| 3 | **Salary Distribution** | Driver salaries show no difference in variance pre/post budget cap | Salary variance **decreased** after budget cap |
 | 4 | **Competitive Balance** | Points distribution uniformity remained the same | Competition **became more balanced** after the cap |
 
 ---
@@ -91,12 +91,11 @@ Data compiled from publicly available articles:
 ## Ethical & AI Statement
 All data sources are publicly available and properly cited.  
 No private or scraped personal data is used.  
-I used LLM tools for searching data and checked readme file for relevance with guidelines.
+I used LLM tools for searching data and checked the README file for relevance with the course guidelines.
 
 ---
 
 ## Future Work
-In the future, I plan to extend the project by:
-- Adding **reliability metrics** (DNFs or accidents) from the Ergast API to evaluate whether reduced budgets impacted technical robustness.  
-- Including **driver market dynamics**, such as contract durations or sponsorship dependencies.  
-- Applying **machine learning regression models** to predict team performance using multi-year financial and driver variables.
+- Add **reliability metrics** (DNFs or accidents) from the Ergast API to see whether reduced budgets impacted robustness.  
+- Include **driver market dynamics**, such as contract durations or sponsorship effects.  
+- Apply **machine learning regression models** to predict team performance using multi-year financial and driver variables.
