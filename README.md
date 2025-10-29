@@ -1,2 +1,102 @@
-# Formula-1-Budget-Limitation-Analysis
-Formula 1 Budget Limitation Analysis for DSA210 Project
+# 🏎️ Formula 1 Budget Limitation Analysis
+
+## Overview
+For my DSA210 project, I wanted to compare data before and after F1 2021 Budget Cap and it's effects on personal performance, salaries and winners.
+Before 2021, high-spending teams such as Mercedes and Ferrari consistently dominated, the new cost-cap rules aims to level the field.  
+
+The project tests whether **team success is now less dependent on total spending** and **more related to driver skill and salaries**.
+
+---
+
+## Objectives
+- Analyze how **team budgets** correlate with **constructor rankings** before and after 2021.  
+- Examine whether **driver salaries** have become equal after the budget cap.  
+- Test if **driver performance (skill/value)** became a decider on team's success.  
+- Compare findings through visualizations and statistical analysis.
+
+---
+
+## Data Sources
+### Performance & Results  
+- [Kaggle: *Formula 1 World Championship (1950–2020)*](https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020)  
+  Contains constructors, drivers, races, points, standings, and results.
+
+### Driver Salaries (2012 – 2025)
+Data compiled from publicly available articles:
+- Crash.net salary reports (2012–2015)  
+- GrandPrix247 (2016–2017)  
+- GP Fans (2018–2019)  
+- RacingNews365, Total Motorsport, NBC Miami, and others (2020–2025)
+
+### Budget and Cost Cap Information
+- [FIA Financial Regulations](https://www.fia.com/regulation/category/110)  
+- [RacingNews365: What is the Formula 1 Cost Cap?](https://racingnews365.com/what-is-the-formula-1-cost-cap)  
+- [RaceFans – F1 Team Budgets 2019](https://www.racefans.net/2019/03/14/f1-team-budgets-2019/)  
+- [PlanetF1 – Budget Cap Explained](https://www.planetf1.com/features/f1-budget-cap-explained)
+
+---
+
+## Methodology
+### Data Collection & Cleaning
+- Merge Kaggle race results (team-year performance) with salary estimates.  
+- Standardize team names and convert currencies to USD (2021 base year).  
+- Label each observation as **pre-cap (≤ 2020)** or **post-cap (≥ 2021)**.
+- Combine salaries with teams spendings. 
+
+### Exploratory Data Analysis
+- Visualize team budgets, total points, and salary distributions.  
+- Compute correlations between budget, salary, and points for both eras.  
+
+### Statistical Testing & Modeling
+- **Correlation tests** (Pearson/Spearman) → Budget vs Performance.  
+- **t-tests / ANOVA** → Salary changes pre vs post cap.  
+- **Regression model** →  
+  `Team Points ~ Budget + Avg Salary + PostCap Interaction`.  
+
+### Visualization & Reporting
+- Scatter plots (budget vs points).  
+- Heatmaps (correlations).  
+- Boxplots (salary variance).  
+- Gini or Herfindahl index to measure competitive balance.  
+
+---
+
+## Hypotheses
+
+| # | Hypothesis | Null Hypothesis (H₀) | Alternative (H₁) |
+|:-:|-------------|----------------------|------------------|
+| 1 | **Budget–Performance Correlation** | Team budget and points correlation did **not change** after 2021 | Correlation **changed** after budget cap|
+| 2 | **Salary Effect on Performance** | Driver salary is not significantly related to team success | Driver salary is **positively related** to team success after the cap |
+| 3 | **Salary Distribution** | Driver salaries show no difference in variance pre/post bugdet cap | Salary variance **decreased** after budget cap |
+| 4 | **Competitive Balance** | Points distribution uniformity remained the same | Competition **became more balanced** after the cap |
+
+---
+
+## Expected Findings
+- The **budget–performance link** will decline post-cap.  
+- The **driver salary–performance correlation** will rise (skill > spending).  
+- **Competitive balance** among teams will improve.  
+
+---
+
+## Tools & Environment
+- **Language:** Python 3.9  
+- **Libraries:**  
+  `pandas`, `numpy`, `matplotlib`, `seaborn`, `scipy`, `statsmodels`, `scikit-learn`  
+- **Version Control:** Git + GitHub  
+- **IDE:** Jupyter Notebook / VS Code  
+
+---
+
+## Ethical & AI Statement
+All data sources are publicly available and properly cited.  
+No private or scraped personal data is used.  
+I used LLM tools for searching data and checked readme file for relevance with guidelines.
+
+---
+
+## Future Work
+In the future, I plan to extend the project by:
+- Adding **reliability metrics** (DNFs or accidents) from the Ergast API to evaluate whether reduced budgets impacted technical robustness.  
+- Including **driver market dynamics**, such as contract durations or sponsorship dependencies.  
+- Applying **machine learning regression models** to predict team performance using multi-year financial and driver variables.
