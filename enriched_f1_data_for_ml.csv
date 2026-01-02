@@ -1,0 +1,21 @@
+Year,Team,Budget,DriverBill,Points,Era,Era_Dummy,Salary_Era_Interact
+2019,Mercedes,425,58.5,739,Pre-Cap,0,0.0
+2019,Ferrari,435,42.5,504,Pre-Cap,0,0.0
+2019,Red Bull,335,15.0,417,Pre-Cap,0,0.0
+2019,McLaren,250,4.26,145,Pre-Cap,0,0.0
+2019,Renault,210,38.5,91,Pre-Cap,0,0.0
+2019,Toro Rosso,155,1.5,85,Pre-Cap,0,0.0
+2019,Racing Point,155,4.7,73,Pre-Cap,0,0.0
+2019,Alfa Romeo,155,4.73,57,Pre-Cap,0,0.0
+2019,Haas,150,3.0,28,Pre-Cap,0,0.0
+2019,Williams,150,0.75,1,Pre-Cap,0,0.0
+2023,Red Bull,135,65.0,860,Post-Cap,1,65.0
+2023,Mercedes,135,43.0,409,Post-Cap,1,43.0
+2023,Ferrari,135,36.0,406,Post-Cap,1,36.0
+2023,McLaren,135,22.0,302,Post-Cap,1,22.0
+2023,Aston Martin,135,7.0,280,Post-Cap,1,7.0
+2023,Alpine,135,11.0,120,Post-Cap,1,11.0
+2023,Williams,135,4.0,28,Post-Cap,1,4.0
+2023,AlphaTauri,135,3.0,25,Post-Cap,1,3.0
+2023,Alfa Romeo,135,12.0,16,Post-Cap,1,12.0
+2023,Haas,135,7.0,12,Post-Cap,1,7.0
