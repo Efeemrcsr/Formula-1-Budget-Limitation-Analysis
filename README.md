@@ -60,8 +60,7 @@ Data compiled from publicly available articles:
 ### Statistical Testing & Modeling
 - **Correlation tests** (Pearson/Spearman) → Budget vs Performance.  
 - **t-tests / ANOVA** → Salary changes pre vs post cap.  
-- **Regression model** →  
-  `Team Points ~ Budget + Avg Salary + PostCap Interaction`.  
+- **Regression model** →    
 
 ### Visualization & Reporting
 - Scatter plots (budget vs points).  
@@ -72,53 +71,67 @@ Data compiled from publicly available articles:
 ---
 
 ## Hypotheses
-| 1 | **Budget–Performance Correlation** 
-| Team budget and points correlation did **not change** after 2021 
-| Correlation **changed** after budget cap |
-Finance years: [2019, 2023]
-Merged (finance + wins) years: [2019, 2023]
-   Year      Team  Total Spending Currency  Wins      Era
-0  2019  Mercedes       425000000      USD  15.0  Pre-Cap
-1  2019   Ferrari       435000000      USD   3.0  Pre-Cap
-2  2019  Red Bull       335000000      USD   3.0  Pre-Cap
-3  2019   McLaren       250000000      USD   0.0  Pre-Cap
-4  2019   Renault       210000000      USD   0.0  Pre-Cap
-<img width="2092" height="1331" alt="Screenshot 2026-01-09 222144" src="https://github.com/user-attachments/assets/3bb2b467-b120-4618-8609-515f593626e8" />
-<img width="1184" height="584" alt="image" src="https://github.com/user-attachments/assets/1dc3ab5e-242a-4c9a-9ad0-7ddd4aba755a" />
-Finance+Wins correlations (2019 vs 2023):
-All eras:       Total Spending   Wins
-Total Spending        1.000000  0.346245
-Wins                  0.346245  1.000000 
 
-Pre-Cap:        Total Spending   Wins
-Total Spending        1.000000  0.737152
-Wins                  0.737152  1.000000 
-
-Post-Cap:       Total Spending   Wins
-Total Spending             NaN   NaN
-Wins                       NaN   1.0 
-
-<img width="978" height="284" alt="image" src="https://github.com/user-attachments/assets/4bb26dd0-8e5a-4a89-9755-91f1ca572114" />
-
+| # | Hypothesis | Null Hypothesis (H₀) | Alternative (H₁) |
+|:-:|-------------|----------------------|------------------|
+| 1 | **Budget–Performance Correlation** | Team budget and points correlation did **not change** after 2021 | Correlation **changed** after budget cap |
 | 2 | **Salary Effect on Performance** | Driver salary is not significantly related to team success | Driver salary is **positively related** to team success after the cap |
---- Correlation test: Budget vs Wins (2019 vs 2023) ---
+| 3 | **Salary Distribution** | Driver salaries show no difference in variance pre/post budget cap | Salary variance **decreased** after budget cap |
+| 4 | **Competitive Balance** | Points distribution uniformity remained the same | Competition **became more balanced** after the cap |
+
+---
+### Finance + Wins Merged Data (2019 & 2023)
+
+Finance years: [2019, 2023]  
+Merged (finance + wins) years: [2019, 2023]
+
+| Year | Team     | Total Spending | Currency | Wins | Era     |
+|------|----------|----------------|----------|------|---------|
+| 2019 | Mercedes | 425000000      | USD      | 15.0 | Pre-Cap |
+| 2019 | Ferrari  | 435000000      | USD      | 3.0  | Pre-Cap |
+| 2019 | Red Bull | 335000000      | USD      | 3.0  | Pre-Cap |
+| 2019 | McLaren  | 250000000      | USD      | 0.0  | Pre-Cap |
+| 2019 | Renault  | 210000000      | USD      | 0.0  | Pre-Cap |
+
+<img width="1078" height="684" alt="image" src="https://github.com/user-attachments/assets/5ee854bd-445e-4934-8cd0-3656f5406000" />
+<img width="1078" height="684" alt="image" src="https://github.com/user-attachments/assets/ef6a8429-ed11-47d0-a2fd-c817e9a4a9b5" />
+
+## Finance + Wins Correlations (2019 vs 2023)
+
+### All Eras
+|                | Total Spending | Wins |
+|----------------|----------------|------|
+| **Total Spending** | 1.000000 | 0.346245 |
+| **Wins** | 0.346245 | 1.000000 |
+
+### Pre-Cap Era
+|                | Total Spending | Wins |
+|----------------|----------------|------|
+| **Total Spending** | 1.000000 | 0.737152 |
+| **Wins** | 0.737152 | 1.000000 |
+
+### Post-Cap Era
+|                | Total Spending | Wins |
+|----------------|----------------|------|
+| **Total Spending** | NaN | NaN |
+| **Wins** | NaN | 1.0 |
+
+<img width="978" height="284" alt="image" src="https://github.com/user-attachments/assets/3482dfda-ccc8-4607-ae85-31394de2b6e1" />
+
+### Correlation test: Budget vs Wins (2019 vs 2023)
 Pre-Cap -> r = 0.737, p = 0.0150
 Post-Cap correlation cannot be computed (spending is constant).
 
---- t-test: Wins (2019 vs 2023) ---
+### t-test: Wins (2019 vs 2023)
 T-test Wins: t = -0.039, p = 0.9694
 
-<img width="1384" height="584" alt="image" src="https://github.com/user-attachments/assets/e769faff-a8bf-4d51-afb0-2ab0d5f3245a" />
-<img width="984" height="484" alt="image" src="https://github.com/user-attachments/assets/884f2446-42ec-491b-af80-37ffdb7796c8" />
+<img width="1384" height="584" alt="image" src="https://github.com/user-attachments/assets/6cdcaa04-9461-423a-b1ee-7b1d6620dc7c" />
+<img width="984" height="484" alt="image" src="https://github.com/user-attachments/assets/131efec4-2fca-4cb1-a085-bfc43a64874c" />
 
-| 3 | **Salary Distribution** | Driver salaries show no difference in variance pre/post budget cap | Salary variance **decreased** after budget cap |
+### Correlation (Salary vs Points) 2019: 0.8168221865710157
+### Correlation (Salary vs Points) 2023: 0.9367562310520083
 
-Correlation (Salary vs Points) 2019: 0.8168221865710157
-Correlation (Salary vs Points) 2023: 0.9367562310520083
-<img width="1389" height="590" alt="image" src="https://github.com/user-attachments/assets/53ed51c9-59aa-49d9-a9dd-ac1ffe0bea2e" />
-<img width="2095" height="894" alt="Screenshot 2026-01-09 222226" src="https://github.com/user-attachments/assets/6d8a620f-57c9-4a83-b6e8-3bc4705966d1" />
-
-| 4 | **Competitive Balance** | Points distribution uniformity remained the same | Competition **became more balanced** after the cap |
+<img width="2095" height="894" alt="Screenshot 2026-01-09 222226" src="https://github.com/user-attachments/assets/cb7bcd2b-5595-4be7-8e26-9ca340afdcaf" />
 
 ---
 
