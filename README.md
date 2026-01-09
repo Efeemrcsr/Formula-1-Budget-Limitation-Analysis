@@ -72,10 +72,9 @@ Data compiled from publicly available articles:
 ---
 
 ## Hypotheses
-
-| # | Hypothesis | Null Hypothesis (H₀) | Alternative (H₁) |
-|:-:|-------------|----------------------|------------------|
-| 1 | **Budget–Performance Correlation** | Team budget and points correlation did **not change** after 2021 | Correlation **changed** after budget cap |
+| 1 | **Budget–Performance Correlation** 
+| Team budget and points correlation did **not change** after 2021 
+| Correlation **changed** after budget cap |
 Finance years: [2019, 2023]
 Merged (finance + wins) years: [2019, 2023]
    Year      Team  Total Spending Currency  Wins      Era
@@ -87,6 +86,18 @@ Merged (finance + wins) years: [2019, 2023]
 <img width="2092" height="1331" alt="Screenshot 2026-01-09 222144" src="https://github.com/user-attachments/assets/3bb2b467-b120-4618-8609-515f593626e8" />
 <img width="1184" height="584" alt="image" src="https://github.com/user-attachments/assets/1dc3ab5e-242a-4c9a-9ad0-7ddd4aba755a" />
 Finance+Wins correlations (2019 vs 2023):
+All eras:       Total Spending   Wins
+Total Spending        1.000000  0.346245
+Wins                  0.346245  1.000000 
+
+Pre-Cap:        Total Spending   Wins
+Total Spending        1.000000  0.737152
+Wins                  0.737152  1.000000 
+
+Post-Cap:       Total Spending   Wins
+Total Spending             NaN   NaN
+Wins                       NaN   1.0 
+
 <img width="978" height="284" alt="image" src="https://github.com/user-attachments/assets/4bb26dd0-8e5a-4a89-9755-91f1ca572114" />
 
 | 2 | **Salary Effect on Performance** | Driver salary is not significantly related to team success | Driver salary is **positively related** to team success after the cap |
